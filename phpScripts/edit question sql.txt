@@ -1,0 +1,14 @@
+:|a Potentially not helpful
+
+Editing question;
+	update questions set q_text = ?, q_type = ?, q_correct_id = ? where q_id = ?;
+
+Editing answer;
+	update answer set a_text = ?, p_filename = ? where a_id = ?;
+
+Editing which answers are associated with question;
+	insert into multanswers values (?, ?);
+
+	or
+
+	delete from multanswers where q_id = ? and a_id = ?;
